@@ -21,5 +21,4 @@ The search bar filters the displayed videos without making additional API reques
 
 
 ScreenShorts ![Screenshot 2025-03-20 004543](https://github.com/user-attachments/assets/9b385174-3d4b-48e6-8ea3-e85a1c6015db)
-![image](https://github.com/user-attachments/assets/d7a3e12d-ef97-4ea0-8c45-97e3d83df918)
 

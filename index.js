@@ -2,6 +2,10 @@ let currentPage = 1;
 let allVideos = []; // Store all videos for filtering
 
 const fetchVideos = async (page) => {
+  // i check api total pages 10 if any one try to greater than 10 automatically restart page 1 for safe access
+  if (page > 10) {
+    page = 1;
+  }
   const url = `https://api.freeapi.app/api/v1/public/youtube/videos?page=${page}&limit=10&query=javascript&sortBy=mostViewed`;
   const options = { method: "GET", headers: { accept: "application/json" } };
 
@@ -42,6 +46,9 @@ const updateUI = async (searchQuery = "") => {
   );
 
   // Update page number
+  if (currentPage > 10) {
+    currentPage = 1;
+  }
   pageNumber.innerText = `Page ${currentPage}`;
 
   // Enable/disable buttons

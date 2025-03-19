@@ -1,19 +1,176 @@
-/* using flex  */
+/* Reset Default Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Arial", sans-serif;
 }
-/* //select header */
 
-.nevigation-pannel {
+/* Navigation Panel */
+.navigation-panel {
+  background: #007bff;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.nevigation-pannel ul {
+
+.navigation-panel ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  width: 60%;
-  background-color: #f1f1f1;
+  gap: 20px;
+}
+
+.navigation-panel ul li {
+  display: inline;
+}
+
+.navigation-panel ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navigation-panel ul li a:hover {
+  color: #f1c40f;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-box input[type="text"] {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.search-box button {
+  background: #f1c40f;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #e67e22;
+}
+
+/* Main Container */
+.main-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Cards Section */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Individual Card */
+.card {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 0 5px;
+  font-size: 18px;
+  color: #333;
+}
+
+.card p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Watch Button */
+.card button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #218838;
+}
+
+/* Channel Link */
+.card a {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.card a:hover {
+  color: #e67e22;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navigation-panel {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .navigation-panel ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-box input {
+    width: 150px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
